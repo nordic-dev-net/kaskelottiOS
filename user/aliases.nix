@@ -1,30 +1,14 @@
 {
   # Keyboard layout
   fi = "hyprctl keyword input:kb_layout fi";
-  en = "hyprctl keyword input:kb_layout us";
-
-  # Firefox shortcuts
-
-  reddit = "firefox -new-window https://reddit.com";
-  youtube = "firefox -new-window https://youtube.com";
-  protonmail = "firefox -new-window https://mail.protonmail.com";
+  us = "hyprctl keyword input:kb_layout us";
+  no = "hyprctl keyword input:kb_layout no";
 
   # Nix commands
-  rebuild = "pushd /etc/nixos; sudo nixos-rebuild --flake '.#vega' switch; popd";
-
-  # Git
-  stage = "git add";
-  commit = "git commit -s -S";
-  push = "git push";
+  kaskelotti-update = "pushd ~/kaskelottiOS; git fetch; git pull; sudo nixos-rebuild --flake '.#kaskelotti' switch; popd";
 
   # Editor
   edit = "$EDITOR";
-
-  # Shortcuts
-  repos = "cd ~/Repos";
-  nixos = "cd ~/Repos/nixos";
-
-  mail = "protonmail-bridge &";
 
   pdf = "zathura";
 }
