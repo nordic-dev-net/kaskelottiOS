@@ -47,6 +47,7 @@
       isNormalUser = true;
       description = "${description}";
       extraGroups = ["networkmanager" "wheel" "dialout"];
+      shell = "${pkgs.zsh}/bin/zsh";
     };
 
     home-manager.users.${name} = {
