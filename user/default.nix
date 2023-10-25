@@ -8,6 +8,7 @@
   shellAliases = import ./aliases.nix;
   sessionVariables = import ./environment.nix;
   extraPackages = import ./packages.nix pkgs;
+  colorScheme = inputs.nix-colors.colorSchemes.tokyo-night-dark;
 in
   inputs.common.mkUser {
     inherit
@@ -17,6 +18,7 @@ in
       shellAliases
       sessionVariables
       extraPackages
+      colorScheme
       ;
 
     name = "physeter";
@@ -25,5 +27,6 @@ in
 
     userImports = [
       (inputs.common.programs.zsh {inherit pkgs shellAliases;})
+      (inputs.common.programs.alacritty {inherit colorScheme;})
     ];
 }

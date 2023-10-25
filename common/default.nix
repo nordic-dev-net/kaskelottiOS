@@ -4,6 +4,7 @@
 {inputs, ...}: let
   programs = {
     zsh = import ./zsh;
+    alacritty = import ./alacritty;
   };
   # A function that generates attributes for each system architecture. It takes
   # a list of system architectures as input and returns a set of attributes

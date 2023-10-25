@@ -25,12 +25,16 @@
     # in the development and management of Nix flakes, simplifying tasks such
     # as building, testing, and deployment of flake-based projects.
     flake-utils.url = "github:numtide/flake-utils";
+
+    # nix-colors helps with creating system-wide color templates for Nix.
+    nix-colors.url = "github:misterio77/nix-colors";
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    nix-colors,
     ...
   } @ flake-inputs: let
     inputs =
