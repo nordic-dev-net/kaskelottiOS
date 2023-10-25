@@ -44,7 +44,7 @@ with pkgs; [
   alsa-utils
   deploy-rs
   jq
-  alacritty
+  git
 
   # Testing
   gpsd
