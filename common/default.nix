@@ -75,5 +75,5 @@
     };
   };
 in {
-  inherit forEachSystem forEachPkgs mkNixos mkUser;
+  inherit programs forEachSystem forEachPkgs mkNixos mkUser;
 }

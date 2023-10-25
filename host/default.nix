@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: let
-  name = "luna";
+  name = "kaskelotti";
 in {
   imports = [
     ./hardware-configuration.nix

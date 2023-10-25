@@ -22,4 +22,8 @@ in
     name = "physeter";
 
     description = "KaskelottiOS common user Physeter";
+
+    userImports = [
+      (inputs.common.programs.zsh {inherit pkgs shellAliases;})
+    ];
 }
