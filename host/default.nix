@@ -9,51 +9,17 @@ in {
   imports = [
     ./hardware-configuration.nix
     (import "${inputs.home-manager}/nixos")
-    # inputs.hyprland.nixosModules.default
-    # inputs.common.programs.gnome
   ];
-
-  nix.buildMachines = [
-    {
-      hostName = "awsarm";
-      system = "aarch64-linux";
-      maxJobs = 16;
-      sshUser = "juliuskoskela";
-      supportedFeatures = ["kvm" "benchmark" "big-parallel" "nixos-test"];
-      mandatoryFeatures = [];
-      sshKey = "/root/.ssh/unikie-aws-arm";
-    }
-  ];
-
-  nix.distributedBuilds = true;
 
   system.stateVersion = inputs.stateVersion;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
-
-  boot.kernel.sysctl."net.ipv4.ip_forward" = 1;
-
-  boot.binfmt.emulatedSystems = ["aarch64-linux"];
-
-  # Setup keyfile
-  boot.initrd.secrets = {
-    "/crypto_keyfile.bin" = null;
-  };
-
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  nixpkgs.config = {
-    allowUnfree = true;
-    # TODO! Required by nixvim and Copilot, remove if Copilot is udpated
-    # to use the new version of nodejs.
-    permittedInsecurePackages = [
-      "nodejs-16.20.0"
-    ];
-  };
+  nixpkgs.config.allowUnfree = true;
 
   hardware = {
     bluetooth = {
@@ -86,25 +52,8 @@ in {
   };
 
   services = {
-    # xserver = {
-    #   enable = true;
-    #   displayManager.gdm = {
-    #     enable = true;
-    #     wayland = true;
-    #   };
-    #   displayManager.setupCommands = ''
-    #     xrandr --output eDP-1 --primary --mode 1920x1080
-    #   '';
-    # };
     blueman.enable = true;
-    printing.enable = true;
     openssh.enable = true;
-    # pipewire = {
-    #   enable = true;
-    #   alsa.enable = true;
-    #   alsa.support32Bit = true;
-    #   pulse.enable = true;
-    # };
   };
 
   networking = {
@@ -136,7 +85,6 @@ in {
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.login.enableGnomeKeyring = true;
   programs.dconf.enable = true;
-  programs.hyprland.enable = true;
   sound.enable = true;
   security.rtkit.enable = true;
   environment = {
