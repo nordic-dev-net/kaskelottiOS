@@ -48,9 +48,9 @@
     # different NixOS system configurations that can be built using the
     # mkNixos function from the lib library.
     nixosConfigurations.kaskelotti = inputs.common.mkNixos [
-        ./host
-        ./user
-      ] "x86_64-linux";
+      ./host
+      ./user
+    ] "x86_64-linux";
 
     formatter = inputs.common.forEachPkgs (pkgs: pkgs.alejandra);
   };

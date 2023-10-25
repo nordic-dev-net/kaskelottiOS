@@ -29,4 +29,4 @@ in
       (inputs.common.programs.zsh {inherit pkgs shellAliases;})
       (inputs.common.programs.alacritty {inherit colorScheme;})
     ];
-}
+  }
