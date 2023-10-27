@@ -71,15 +71,15 @@ in {
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
-      LC_ADDRESS = "nb_NO.UTF-8";
-      LC_IDENTIFICATION = "nb_NO.UTF-8";
-      LC_MEASUREMENT = "nb_NO.UTF-8";
-      LC_MONETARY = "nb_NO.UTF-8";
-      LC_NAME = "nb_NO.UTF-8";
-      LC_NUMERIC = "nb_NO.UTF-8";
-      LC_PAPER = "nb_NO.UTF-8";
-      LC_TELEPHONE = "nb_NO.UTF-8";
-      LC_TIME = "nb_NO.UTF-8";
+      LC_ADDRESS = "no_NO.UTF-8";
+      LC_IDENTIFICATION = "no_NO.UTF-8";
+      LC_MEASUREMENT = "no_NO.UTF-8";
+      LC_MONETARY = "no_NO.UTF-8";
+      LC_NAME = "no_NO.UTF-8";
+      LC_NUMERIC = "no_NO.UTF-8";
+      LC_PAPER = "no_NO.UTF-8";
+      LC_TELEPHONE = "no_NO.UTF-8";
+      LC_TIME = "no_NO.UTF-8";
     };
   };
 
