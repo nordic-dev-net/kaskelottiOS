@@ -67,19 +67,19 @@ in {
     '';
   };
 
-  time.timeZone = "Europe/Helsinki";
+  time.timeZone = "Europe/Oslo";
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
-      LC_ADDRESS = "fi_FI.UTF-8";
-      LC_IDENTIFICATION = "fi_FI.UTF-8";
-      LC_MEASUREMENT = "fi_FI.UTF-8";
-      LC_MONETARY = "fi_FI.UTF-8";
-      LC_NAME = "fi_FI.UTF-8";
-      LC_NUMERIC = "fi_FI.UTF-8";
-      LC_PAPER = "fi_FI.UTF-8";
-      LC_TELEPHONE = "fi_FI.UTF-8";
-      LC_TIME = "fi_FI.UTF-8";
+      LC_ADDRESS = "nb_NO.UTF-8";
+      LC_IDENTIFICATION = "nb_NO.UTF-8";
+      LC_MEASUREMENT = "nb_NO.UTF-8";
+      LC_MONETARY = "nb_NO.UTF-8";
+      LC_NAME = "nb_NO.UTF-8";
+      LC_NUMERIC = "nb_NO.UTF-8";
+      LC_PAPER = "nb_NO.UTF-8";
+      LC_TELEPHONE = "nb_NO.UTF-8";
+      LC_TIME = "nb_NO.UTF-8";
     };
   };
 
