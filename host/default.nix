@@ -54,6 +54,7 @@ in {
   services = {
     blueman.enable = true;
     openssh.enable = true;
+    tailscale.enable = true;
   };
 
   networking = {
@@ -101,6 +102,7 @@ in {
       nixpkgs-fmt
       ripgrep
       pulsemixer
+      tailscale
     ];
   };
 }
